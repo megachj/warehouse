@@ -6,7 +6,7 @@ services:
     ports:
       - '3306:3306'
     volumes:
-      - './volumes/mysql:/var/lib/mysql'
+      - './volumes/container_data:/var/lib/mysql'
     environment:
       - TZ=Asia/Seoul
       - MYSQL_ROOT_PASSWORD=root
