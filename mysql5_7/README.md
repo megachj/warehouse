@@ -5,7 +5,7 @@
 sh ./delete-volume.sh
 
 # 1. 도커 컴포즈 실행
-docker-compose up -d --build
+docker-compose up -d {--build}
 
 # 2. 도커 컴포즈 종료
 docker-compose down
