@@ -1,6 +1,15 @@
 # For advice on how to change settings please see
 # http://dev.mysql.com/doc/refman/5.7/en/server-configuration-defaults.html
 
+[client]
+default-character-set = utf8mb4
+
+[mysql]
+default-character-set = utf8mb4
+
+[mysqldump]
+default-character-set = utf8mb4
+
 [mysqld]
 #
 # Remove leading # and set to the amount of RAM for the most important data
@@ -23,6 +32,13 @@ skip-name-resolve
 #socket=/var/lib/mysql/mysql.sock
 #secure-file-priv=/var/lib/mysql-files
 user=mysql
+
+character-set-server = utf8mb4
+collation-server = utf8mb4_unicode_ci
+
+skip-character-set-client-handshake # 클라이언트 인코딩 설정을 무시하고 데이터베이스 인코딩을 쓴다
+#init_connect="SET collation_connection = utf8mb4_unicode_ci" # 데이터베이스에 connect 할 경우 실행되는 스크립트
+#init_connect="SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci"
 
 # Disabling symbolic-links is recommended to prevent assorted security risks
 symbolic-links=0

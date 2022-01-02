@@ -1,1 +1,1 @@
-rm -rf volumes/mysql/*
+rm -rf volumes/container_data/*

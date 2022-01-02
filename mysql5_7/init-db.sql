@@ -76,3 +76,20 @@ CREATE TABLE `tb_dual`(
   `fd1` tinyint(4) NOT NULL,
   PRIMARY KEY (`fd1`)
 ) ENGINE=InnoDB;
+
+-- ### 데이터 초기화 ###
+INSERT INTO `departments`(`dept_no`, `dept_name`) 
+VALUES 
+('d001', '재무팀'),
+('d002', '인사팀'),
+('d003', '마케팅팀'),
+('d004', '사업팀'),
+('d005', '개발팀');
+
+INSERT INTO `employees`(`emp_no`, `birth_date`, `first_name`, `last_name`, `gender`, `hire_date`) 
+VALUES 
+(1, '1984-01-01', '병건', '이', 'M', '2018-01-02'),
+(2, '1985-02-01', '천', '통', 'F', '2018-01-02'),
+(3, '1980-03-01', '착맨', '침', 'M', '2018-01-02'),
+(4, '1979-04-01', '펄', '쭈', 'M', '2018-01-02'),
+(5, '1990-05-01', '풍', '김', 'M', '2018-01-02');
